@@ -40,6 +40,7 @@
     var ipt = document.getElementById("u-input"),
         next = document.getElementById("next"),
         s_in = document.getElementById('start-input'),
+        start_button = document.getElementById("start-btn"),
         m_cont = document.getElementById('map-container'),
         i_cont = document.getElementById('intro-container'),
         time = document.getElementById("time"),
@@ -47,18 +48,26 @@
         timer = new Timer(time),
         game = new Game();
     
-    s_in.onclick = init;
+    start_button.onclick = init;
     next.onclick = nextPlace;
     hint.onclick = nextHint;
     s_in.focus();
 
     (function startSequence() {
-      var arr = "start?".split('');
+      var arr = "loading".split('');
       window.setTimeout(function() {
-        for (var i=0; i<6; i++) {
+        for (var i=0; i<arr.length; i++) {
           window.setTimeout(text, 200*i, i);
         }
-        function text(i){s_in.value = arr[i];}
+        function text(i) { 
+          s_in.value = arr[i];
+          if (i === arr.length -1) {
+            window.setTimeout(function() {
+              s_in.style.display = 'none';
+              start_button.style.display = 'block';
+            }, 500);
+          }
+        }
       }, 1000);
     })();
 

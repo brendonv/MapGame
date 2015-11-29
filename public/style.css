@@ -25,9 +25,17 @@ input:focus {
   transform: translateY(-50%);
   text-align: center;
 }
+#intro-container .start {
+  cursor: pointer;
+}
 #intro-container .start input {
   width: 30px;
-  cursor: pointer;
+}
+#intro-container .start #start-btn {
+  border: none;
+  display: none;
+  color: #008000;
+  font-size: 50px;
 }
 .timer {
   width: 100%;
