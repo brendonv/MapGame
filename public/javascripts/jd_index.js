@@ -160,7 +160,7 @@
     function nextHint() {
       if (hintIndex > country.name.length-1) return;
       if (hintIndex === 0 && ipt.value.length) ipt.value = '';
-      ipt.value += country.name.split('')[hintIndex];
+      ipt.value = country.name.slice(0,hintIndex+1);
       hintIndex++;
       ipt.focus();
     }
