@@ -1,0 +1,71 @@
+html,
+body {
+  height: 100%;
+  font-family: 'Oswald', sans-serif;
+  overflow: hidden;
+}
+input {
+  font-family: 'Oswald', sans-serif;
+  border: none;
+  font-size: 50px;
+}
+input:focus {
+  outline: none;
+}
+.hide {
+  display: none;
+}
+#intro-container {
+  height: 100%;
+}
+#intro-container .text {
+  position: relative;
+  top: 33%;
+  transform: translateY(-50%);
+  text-align: center;
+}
+#intro-container .start input {
+  width: 30px;
+  cursor: pointer;
+}
+.timer {
+  width: 100%;
+  text-align: center;
+  height: 40px;
+}
+.timer #time {
+  font-size: 20px;
+  width: 100px;
+}
+#map-container {
+  display: none;
+}
+#map-container .question-box {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding-top: 20px;
+  text-align: center;
+}
+#map-container .question-box > * {
+  display: inline-block;
+}
+#map-container .question-box #u-input {
+  width: 50%;
+  max-width: 700px;
+}
+#map-container .question-box .error {
+  color: #f00;
+}
+#map-container .question-box .correct {
+  color: #008000;
+}
+#map-container .question-box #next,
+#map-container .question-box #hint {
+  cursor: pointer;
+  font-size: 50px;
+  margin-right: 20px;
+}

@@ -1,0 +1,56 @@
+html, body
+  height 100%
+  font-family 'Oswald', sans-serif
+  overflow hidden
+input
+  font-family 'Oswald', sans-serif
+  border none
+  font-size 50px
+input:focus
+  outline none
+.hide
+  display none
+#intro-container
+  height 100%
+  .text
+    position relative
+    top 33%
+    transform translateY(-50%)
+    text-align center
+  .start input
+    width 30px
+    cursor pointer
+.timer
+  width 100%
+  text-align center
+  height 40px
+  #time
+    font-size 20px
+    width 100px
+
+#map-container
+  display none
+  .question-box
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding-top 20px
+    text-align center
+    & > *
+      display inline-block
+    #u-input
+      width 50%
+      max-width 700px
+    .error
+      color red
+    .correct
+      color green
+    #next, #hint
+      cursor pointer
+      font-size 50px
+      margin-right 20px
+
+

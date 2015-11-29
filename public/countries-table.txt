@@ -1,0 +1,2008 @@
+function parse(s) {
+    var countries = [];
+    var c = "";
+    var arr = s.split("");
+    console.log(arr.length);
+    for (var i = 0; i<arr.length-1; i++) {
+        var l = arr[i].toLowerCase();
+        if (l.charCodeAt() === 32) continue;
+        // Alpha
+        if (l.charCodeAt() >= 97 && l.charCodeAt() <= 122 ) {
+            c += arr[i];
+            if (arr[i+1].charCodeAt() === 32 && arr[i+2].toLowerCase().charCodeAt() >= 97 && arr[i+2].toLowerCase().charCodeAt() <= 122) {
+                c += " ";
+            }
+        } else {
+            // Is char <
+            if (c.length) countries.push(c);
+            c = "";
+            if (l.charCodeAt() === 60) {
+                if (arr[i+1].charCodeAt() === "47") {
+                    i+=4;
+                } else {
+                    i+=3;
+                }
+            }
+        }
+    }
+    
+    return countries;
+}
+    <tr> \
+      <td> \
+        Afghanistan *+</td> \
+      <td> \
+        Islamic Republic of Afghanistan</td> \
+      <td> \
+        AF</td> \
+      <td> \
+        Kabul</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Albania *+</td> \
+      <td> \
+        Republic of Albania</td> \
+      <td> \
+        AL</td> \
+      <td> \
+        Tirana</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Algeria *+</td> \
+      <td> \
+        People's Democratic Republic of Algeria</td> \
+      <td> \
+        AG</td> \
+      <td> \
+        Algiers</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Andorra *+</td> \
+      <td> \
+        Principality of Andorra</td> \
+      <td> \
+        AN</td> \
+      <td> \
+        Andorra la Vella</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Angola *+</td> \
+      <td> \
+        Republic of Angola</td> \
+      <td> \
+        AO</td> \
+      <td> \
+        Luanda</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Antigua and \
+        Barbuda *+</td> \
+      <td> \
+        Antiqua and Barbuda</td> \
+      <td> \
+        AC</td> \
+      <td> \
+        Saint John's</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Argentina *+</td> \
+      <td> \
+        Argentine Republic</td> \
+      <td> \
+        AR</td> \
+      <td> \
+        Buenos Aires</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Armenia *+</td> \
+      <td> \
+        Republic of Armenia</td> \
+      <td> \
+        AM</td> \
+      <td> \
+        Yerevan</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Australia *+</td> \
+      <td> \
+        Commonwealth of Australia</td> \
+      <td> \
+        AS</td> \
+      <td> \
+        Canberra</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Austria *+</td> \
+      <td> \
+        Republic of Austria</td> \
+      <td> \
+        AU</td> \
+      <td> \
+        Vienna</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Azerbaijan *+</td> \
+      <td> \
+        Republic of Azerbaijan</td> \
+      <td> \
+        AJ</td> \
+      <td> \
+        Baku</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Bahamas, The *+</td> \
+      <td> \
+        Commonwealth \
+        of The Bahamas</td> \
+      <td> \
+        BF</td> \
+      <td> \
+        Nassau</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Bahrain *+</td> \
+      <td> \
+        Kingdom of Bahrain</td> \
+      <td> \
+        BA</td> \
+      <td> \
+        Manama</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Bangladesh *+</td> \
+      <td> \
+        People's Republic \
+        of Bangladesh</td> \
+      <td> \
+        BG</td> \
+      <td> \
+        Dhaka</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Barbados *+</td> \
+      <td> \
+        Barbados</td> \
+      <td> \
+        BB</td> \
+      <td> \
+        Bridgetown</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Belarus *+</td> \
+      <td> \
+        Republic of Belarus</td> \
+      <td> \
+        BO</td> \
+      <td> \
+        Minsk</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Belgium *+</td> \
+      <td> \
+        Kingdom of Belgium</td> \
+      <td> \
+        BE</td> \
+      <td> \
+        Brussels</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Belize *+</td> \
+      <td> \
+        Belize</td> \
+      <td> \
+        BH</td> \
+      <td> \
+        Belmopan</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Benin *+</td> \
+      <td> \
+        Republic of Benin</td> \
+      <td> \
+        BN</td> \
+      <td> \
+        Porto-Novo</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Bhutan +</td> \
+      <td> \
+        Kingdom of Bhutan</td> \
+      <td> \
+        BT</td> \
+      <td> \
+        Thimphu</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Bolivia *+</td> \
+      <td> \
+        Plurinational State of Bolivia</td> \
+      <td> \
+        BL</td> \
+      <td> \
+        La Paz</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Bosnia and \
+        Herzegovina *+</td> \
+      <td> \
+        Bosnia and&nbsp;Herzegovina</td> \
+      <td> \
+        BK</td> \
+      <td> \
+        Sarajevo</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Botswana *+</td> \
+      <td> \
+        Republic of Botswana</td> \
+      <td> \
+        BC</td> \
+      <td> \
+        Gaborone</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Brazil *+</td> \
+      <td> \
+        Federative Republic of Brazil</td> \
+      <td> \
+        BR</td> \
+      <td> \
+        Brasília</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Brunei *+</td> \
+      <td> \
+        Brunei Darussalam</td> \
+      <td> \
+        BX</td> \
+      <td> \
+        Bandar Seri Begawan</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Bulgaria *+</td> \
+      <td> \
+        Republic of Bulgaria</td> \
+      <td> \
+        BU</td> \
+      <td> \
+        Sofia</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Burkina Faso *+</td> \
+      <td> \
+        Burkina Faso</td> \
+      <td> \
+        UV</td> \
+      <td> \
+        Ouagadougou</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Burma *+</td> \
+      <td> \
+        Union of Burma</td> \
+      <td> \
+        BM</td> \
+      <td> \
+        Rangoon \
+    </tr> \
+    <tr> \
+      <td> \
+        Burundi *+</td> \
+      <td> \
+        Republic of Burundi</td> \
+      <td> \
+        BY</td> \
+      <td> \
+        Bujumbura</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Cabo Verde *+</td> \
+      <td> \
+        Republic of Cabo Verde</td> \
+      <td> \
+        CV</td> \
+      <td> \
+        Praia</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Cambodia *+</td> \
+      <td> \
+        Kingdom of Cambodia</td> \
+      <td> \
+        CB</td> \
+      <td> \
+        Phnom Penh</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Cameroon *+</td> \
+      <td> \
+        Republic of Cameroon</td> \
+      <td> \
+        CM</td> \
+      <td> \
+        Yaoundé</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Canada *+</td> \
+      <td> \
+        Canada</td> \
+      <td> \
+        CA</td> \
+      <td> \
+        Ottawa</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Central \
+        African Republic *+</td> \
+      <td> \
+        Central African Republic</td> \
+      <td> \
+        CT</td> \
+      <td> \
+        Bangui</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Chad *+</td> \
+      <td> \
+        Republic of Chad</td> \
+      <td> \
+        CD</td> \
+      <td> \
+        N'Djamena</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Chile *+</td> \
+      <td> \
+        Republic of Chile</td> \
+      <td> \
+        CI</td> \
+      <td> \
+        Santiago</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        China *+</td> \
+      <td> \
+        People's Republic of China</td> \
+      <td> \
+        CH</td> \
+      <td> \
+        Beijing</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Colombia *+</td> \
+      <td> \
+        Republic of Colombia</td> \
+      <td> \
+        CO</td> \
+      <td> \
+        Bogotá</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Comoros *+</td> \
+      <td> \
+        Union of the Comoros</td> \
+      <td> \
+        CN</td> \
+      <td> \
+        Moroni</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Congo (Brazzaville) *+</td> \
+      <td> \
+        Republic of the Congo</td> \
+      <td> \
+        CF</td> \
+      <td> \
+        Brazzaville</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Congo (Kinshasa) *+</td> \
+      <td> \
+        Democratic Republic \
+        of the Congo</td> \
+      <td> \
+        CG</td> \
+      <td> \
+        Kinshasa</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Costa Rica *+</td> \
+      <td> \
+        Republic of Costa Rica</td> \
+      <td> \
+        CS</td> \
+      <td> \
+        San José</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Côte d'Ivoire *+</td> \
+      <td> \
+        Republic of Côte d'Ivoire</td> \
+      <td> \
+        IV</td> \
+      <td> \
+        Yamoussoukro</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Croatia *+</td> \
+      <td> \
+        Republic of Croatia</td> \
+      <td> \
+        HR</td> \
+      <td> \
+        Zagreb</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Cuba +</td> \
+      <td> \
+        Republic of Cuba</td> \
+      <td> \
+        CU</td> \
+      <td> \
+        Havana</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Cyprus *+</td> \
+      <td> \
+        Republic of Cyprus</td> \
+      <td> \
+        CY</td> \
+      <td> \
+        Nicosia</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Czech Republic *+</td> \
+      <td> \
+        Czech Republic</td> \
+      <td> \
+        EZ</td> \
+      <td> \
+        Prague</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Denmark *+</td> \
+      <td> \
+        Kingdom of Denmark</td> \
+      <td> \
+        DA</td> \
+      <td> \
+        Copenhagen</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Djibouti *+</td> \
+      <td> \
+        Republic of Djibouti</td> \
+      <td> \
+        DJ</td> \
+      <td> \
+        Djibouti</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Dominica *+</td> \
+      <td> \
+        Commonwealth of Dominica</td> \
+      <td> \
+        DO</td> \
+      <td> \
+        Roseau</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Dominican Republic *+</td> \
+      <td> \
+        Dominican Republic</td> \
+      <td> \
+        DR</td> \
+      <td> \
+        Santo Domingo</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Ecuador *+</td> \
+      <td> \
+        Republic of Ecuador</td> \
+      <td> \
+        EC</td> \
+      <td> \
+        Quito</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Egypt *+</td> \
+      <td> \
+        Arab Republic of Egypt</td> \
+      <td> \
+        EG</td> \
+      <td> \
+        Cairo</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        El Salvador *+</td> \
+      <td> \
+        Republic of El Salvador</td> \
+      <td> \
+        ES</td> \
+      <td> \
+        San Salvador</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Equatorial Guinea *+</td> \
+      <td> \
+        Republic of Equatorial Guinea</td> \
+      <td> \
+        EK</td> \
+      <td> \
+        Malabo</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Eritrea *+</td> \
+      <td> \
+        State of Eritrea</td> \
+      <td> \
+        ER</td> \
+      <td> \
+        Asmara</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Estonia *+</td> \
+      <td> \
+        Republic of Estonia</td> \
+      <td> \
+        EN</td> \
+      <td> \
+        Tallinn</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Ethiopia *+</td> \
+      <td> \
+        Federal Democratic \
+        Republic of Ethiopia</td> \
+      <td> \
+        ET</td> \
+      <td> \
+        Addis Ababa</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Fiji *+</td> \
+      <td> \
+        Republic of Fiji</td> \
+      <td> \
+        FJ</td> \
+      <td> \
+        Suva</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Finland *+</td> \
+      <td> \
+        Republic of Finland</td> \
+      <td> \
+        FI</td> \
+      <td> \
+        Helsinki</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        France *+</td> \
+      <td> \
+        French Republic</td> \
+      <td> \
+        FR</td> \
+      <td> \
+        Paris</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Gabon *+</td> \
+      <td> \
+        Gabonese Republic</td> \
+      <td> \
+        GB</td> \
+      <td> \
+        Libreville</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Gambia, The *+</td> \
+      <td> \
+        Republic of The Gambia</td> \
+      <td> \
+        GA</td> \
+      <td> \
+        Banjul</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Georgia *+</td> \
+      <td> \
+        Georgia</td> \
+      <td> \
+        GG</td> \
+      <td> \
+        Tbilisi</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Germany *+</td> \
+      <td> \
+        Federal Republic of Germany</td> \
+      <td> \
+        GM</td> \
+      <td> \
+        Berlin</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Ghana *+</td> \
+      <td> \
+        Republic of Ghana</td> \
+      <td> \
+        GH</td> \
+      <td> \
+        Accra</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Greece *+</td> \
+      <td> \
+        Hellenic Republic</td> \
+      <td> \
+        GR</td> \
+      <td> \
+        Athens</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Grenada *+</td> \
+      <td> \
+        Grenada</td> \
+      <td> \
+        GJ</td> \
+      <td> \
+        Saint George's</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Guatemala *+</td> \
+      <td> \
+        Republic of Guatemala</td> \
+      <td> \
+        GT</td> \
+      <td> \
+        Guatemala</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Guinea *+</td> \
+      <td> \
+        Republic of Guinea</td> \
+      <td> \
+        GV</td> \
+      <td> \
+        Conakry</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Guinea-Bissau *+</td> \
+      <td> \
+        Republic of Guinea-Bissau</td> \
+      <td> \
+        PU</td> \
+      <td> \
+        Bissau</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Guyana *+</td> \
+      <td> \
+        Co-operative&nbsp;Republic of Guyana</td> \
+      <td> \
+        GY</td> \
+      <td> \
+        Georgetown</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Haiti *+</td> \
+      <td> \
+        Republic of Haiti</td> \
+      <td> \
+        HA</td> \
+      <td> \
+        Port-au-Prince</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Holy See *</td> \
+      <td> \
+        Holy See</td> \
+      <td> \
+        VT</td> \
+      <td> \
+        Vatican City</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Honduras *+</td> \
+      <td> \
+        Republic of Honduras</td> \
+      <td> \
+        HO</td> \
+      <td> \
+        Tegucigalpa</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Hungary *+</td> \
+      <td> \
+        Hungary</td> \
+      <td> \
+        HU</td> \
+      <td> \
+        Budapest</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Iceland *+</td> \
+      <td> \
+        Republic of Iceland</td> \
+      <td> \
+        IC</td> \
+      <td> \
+        Reykjavík</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        India *+</td> \
+      <td> \
+        Republic of India</td> \
+      <td> \
+        IN</td> \
+      <td> \
+        New Delhi</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Indonesia *+</td> \
+      <td> \
+        Republic of Indonesia</td> \
+      <td> \
+        ID</td> \
+      <td> \
+        Jakarta</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Iran +</td> \
+      <td> \
+        Islamic Republic of Iran</td> \
+      <td> \
+        IR</td> \
+      <td> \
+        Tehran</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Iraq *+</td> \
+      <td> \
+        Republic of Iraq</td> \
+      <td> \
+        IZ</td> \
+      <td> \
+        Baghdad</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Ireland *+</td> \
+      <td> \
+        Ireland</td> \
+      <td> \
+        EI</td> \
+      <td> \
+        Dublin</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Israel *+</td> \
+      <td> \
+        State of Israel</td> \
+      <td> \
+        IS</td> \
+      <td> \
+        Jerusalem</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Italy *+</td> \
+      <td> \
+        Italian Republic</td> \
+      <td> \
+        IT</td> \
+      <td> \
+        Rome</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Jamaica *+</td> \
+      <td> \
+        Jamaica</td> \
+      <td> \
+        JM</td> \
+      <td> \
+        Kingston</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Japan *+</td> \
+      <td> \
+        Japan</td> \
+      <td> \
+        JA</td> \
+      <td> \
+        Tokyo</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Jordan *+</td> \
+      <td> \
+        Hashemite \
+        Kingdom of Jordan</td> \
+      <td> \
+        JO</td> \
+      <td> \
+        Amman</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Kazakhstan *+</td> \
+      <td> \
+        Republic of Kazakhstan</td> \
+      <td> \
+        KZ</td> \
+      <td> \
+        Astana</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Kenya *+</td> \
+      <td> \
+        Republic of Kenya</td> \
+      <td> \
+        KE</td> \
+      <td> \
+        Nairobi</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Kiribati *+</td> \
+      <td> \
+        Republic of Kiribati</td> \
+      <td> \
+        KR</td> \
+      <td> \
+        Tarawa</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Korea, North +</td> \
+      <td> \
+        Democratic People's Republic of Korea</td> \
+      <td> \
+        KN</td> \
+      <td> \
+        Pyongyang</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Korea, South *+</td> \
+      <td> \
+        Republic of Korea</td> \
+      <td> \
+        KS</td> \
+      <td> \
+        Seoul</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Kosovo *</td> \
+      <td> \
+        Republic of Kosovo</td> \
+      <td> \
+        KV</td> \
+      <td> \
+        Pristina</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Kuwait *+</td> \
+      <td> \
+        State of Kuwait</td> \
+      <td> \
+        KU</td> \
+      <td> \
+        Kuwait</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Kyrgyzstan *+</td> \
+      <td> \
+        Kyrgyz Republic</td> \
+      <td> \
+        KG</td> \
+      <td> \
+        Bishkek</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Laos *+</td> \
+      <td> \
+        Lao People's \
+        Democratic Republic</td> \
+      <td> \
+        LA</td> \
+      <td> \
+        Vientiane</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Latvia *+</td> \
+      <td> \
+        Republic of Latvia</td> \
+      <td> \
+        LG</td> \
+      <td> \
+        Riga</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Lebanon *+</td> \
+      <td> \
+        Lebanese Republic</td> \
+      <td> \
+        LE</td> \
+      <td> \
+        Beirut</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Lesotho *+</td> \
+      <td> \
+        Kingdom of Lesotho</td> \
+      <td> \
+        LT</td> \
+      <td> \
+        Maseru</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Liberia *+</td> \
+      <td> \
+        Republic of Liberia</td> \
+      <td> \
+        LI</td> \
+      <td> \
+        Monrovia</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Libya *+</td> \
+      <td> \
+        Libya</td> \
+      <td> \
+        LY</td> \
+      <td> \
+        Tripoli</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Liechtenstein *+</td> \
+      <td> \
+        Principality of Liechtenstein</td> \
+      <td> \
+        LS</td> \
+      <td> \
+        Vaduz</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Lithuania *+</td> \
+      <td> \
+        Republic of Lithuania</td> \
+      <td> \
+        LH</td> \
+      <td> \
+        Vilnius</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Luxembourg *+</td> \
+      <td> \
+        Grand Duchy of Luxembourg</td> \
+      <td> \
+        LU</td> \
+      <td> \
+        Luxembourg</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Macedonia *+</td> \
+      <td> \
+        Republic of Macedonia</td> \
+      <td> \
+        MK</td> \
+      <td> \
+        Skopje</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Madagascar *+</td> \
+      <td> \
+        Republic of Madagascar</td> \
+      <td> \
+        MA</td> \
+      <td> \
+        Antananarivo</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Malawi *+</td> \
+      <td> \
+        Republic of Malawi</td> \
+      <td> \
+        MI</td> \
+      <td> \
+        Lilongwe</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Malaysia *+</td> \
+      <td> \
+        Malaysia</td> \
+      <td> \
+        MY</td> \
+      <td> \
+        Kuala Lumpur</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Maldives *+</td> \
+      <td> \
+        Republic of Maldives</td> \
+      <td> \
+        MV</td> \
+      <td> \
+        Male</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Mali *+</td> \
+      <td> \
+        Republic of Mali</td> \
+      <td> \
+        ML</td> \
+      <td> \
+        Bamako</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Malta *+</td> \
+      <td> \
+        Republic of Malta</td> \
+      <td> \
+        MT</td> \
+      <td> \
+        Valletta</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Marshall Islands *+</td> \
+      <td> \
+        Republic of the \
+        Marshall Islands</td> \
+      <td> \
+        RM</td> \
+      <td> \
+        Majuro</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Mauritania *+</td> \
+      <td> \
+        Islamic Republic \
+        of Mauritania</td> \
+      <td> \
+        MR</td> \
+      <td> \
+        Nouakchott</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Mauritius *+</td> \
+      <td> \
+        Republic of Mauritius</td> \
+      <td> \
+        MP</td> \
+      <td> \
+        Port Louis</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Mexico *+</td> \
+      <td> \
+        United Mexican States</td> \
+      <td> \
+        MX</td> \
+      <td> \
+        Mexico</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Micronesia, \
+        Federated States of *+</td> \
+      <td> \
+        Federated States \
+        of Micronesia</td> \
+      <td> \
+        FM</td> \
+      <td> \
+        Palikir</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Moldova *+</td> \
+      <td> \
+        Republic of Moldova</td> \
+      <td> \
+        MD</td> \
+      <td> \
+        Chisinau</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Monaco *+</td> \
+      <td> \
+        Principality of Monaco</td> \
+      <td> \
+        MN</td> \
+      <td> \
+        Monaco</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Mongolia *+</td> \
+      <td> \
+        Mongolia</td> \
+      <td> \
+        MG</td> \
+      <td> \
+        Ulaanbaatar</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Montenegro *+ \
+      </td> \
+      <td> \
+        Montenegro \
+      </td> \
+      <td> \
+        MJ \
+      </td> \
+      <td> \
+        Podgorica \
+      </td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Morocco *+</td> \
+      <td> \
+        Kingdom of Morocco</td> \
+      <td> \
+        MO</td> \
+      <td> \
+        Rabat</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Mozambique *+</td> \
+      <td> \
+        Republic of Mozambique</td> \
+      <td> \
+        MZ</td> \
+      <td> \
+        Maputo</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Namibia *+</td> \
+      <td> \
+        Republic of Namibia</td> \
+      <td> \
+        WA</td> \
+      <td> \
+        Windhoek</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Nauru *+</td> \
+      <td> \
+        Republic of Nauru</td> \
+      <td> \
+        NR</td> \
+      <td> \
+        Yaren District \
+        (no capital city)</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Nepal *+</td> \
+      <td> \
+        Federal Democratic Republic of Nepal</td> \
+      <td> \
+        NP</td> \
+      <td> \
+        Kathmandu</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Netherlands *+</td> \
+      <td> \
+        Kingdom of the Netherlands</td> \
+      <td> \
+        NL</td> \
+      <td> \
+        Amsterdam \
+        The Hague (seat of gov't)</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        New Zealand *+</td> \
+      <td> \
+        New Zealand</td> \
+      <td> \
+        NZ</td> \
+      <td> \
+        Wellington</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Nicaragua *+</td> \
+      <td> \
+        Republic of Nicaragua</td> \
+      <td> \
+        NU</td> \
+      <td> \
+        Managua</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Niger *+</td> \
+      <td> \
+        Republic of Niger</td> \
+      <td> \
+        NG</td> \
+      <td> \
+        Niamey</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Nigeria *+</td> \
+      <td> \
+        Federal Republic of Nigeria</td> \
+      <td> \
+        NI</td> \
+      <td> \
+        Abuja</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Norway *+</td> \
+      <td> \
+        Kingdom of Norway</td> \
+      <td> \
+        NO</td> \
+      <td> \
+        Oslo</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Oman *+</td> \
+      <td> \
+        Sultanate of Oman</td> \
+      <td> \
+        MU</td> \
+      <td> \
+        Muscat</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Pakistan *+</td> \
+      <td> \
+        Islamic Republic of Pakistan</td> \
+      <td> \
+        PK</td> \
+      <td> \
+        Islamabad</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Palau *+</td> \
+      <td> \
+        Republic of Palau</td> \
+      <td> \
+        PS</td> \
+      <td> \
+        Melekeok</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Panama *+</td> \
+      <td> \
+        Republic of Panama</td> \
+      <td> \
+        PM</td> \
+      <td> \
+        Panama</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Papua New Guinea *+</td> \
+      <td> \
+        Independent State \
+        of Papua New Guinea</td> \
+      <td> \
+        PP</td> \
+      <td> \
+        Port Moresby</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Paraguay *+</td> \
+      <td> \
+        Republic of Paraguay</td> \
+      <td> \
+        PA</td> \
+      <td> \
+        Asunción</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Peru *+</td> \
+      <td> \
+        Republic of Peru</td> \
+      <td> \
+        PE</td> \
+      <td> \
+        Lima</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Philippines *+</td> \
+      <td> \
+        Republic of the Philippines</td> \
+      <td> \
+        RP</td> \
+      <td> \
+        Manila</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Poland *+</td> \
+      <td> \
+        Republic of Poland</td> \
+      <td> \
+        PL</td> \
+      <td> \
+        Warsaw</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Portugal *+</td> \
+      <td> \
+        Portuguese Republic</td> \
+      <td> \
+        PO</td> \
+      <td> \
+        Lisbon</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Qatar *+</td> \
+      <td> \
+        State of Qatar</td> \
+      <td> \
+        QA</td> \
+      <td> \
+        Doha</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Romania *+</td> \
+      <td> \
+        Romania</td> \
+      <td> \
+        RO</td> \
+      <td> \
+        Bucharest</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Russia *+</td> \
+      <td> \
+        Russian Federation</td> \
+      <td> \
+        RS</td> \
+      <td> \
+        Moscow</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Rwanda *+</td> \
+      <td> \
+        Republic of Rwanda</td> \
+      <td> \
+        RW</td> \
+      <td> \
+        Kigali</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Saint Kitts and Nevis *+</td> \
+      <td> \
+        Federation of Saint \
+        Kitts and Nevis</td> \
+      <td> \
+        SC</td> \
+      <td> \
+        Basseterre</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Saint Lucia *+</td> \
+      <td> \
+        Saint Lucia</td> \
+      <td> \
+        ST</td> \
+      <td> \
+        Castries</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Saint Vincent and \
+        the Grenadines *+</td> \
+      <td> \
+        Saint Vincent and&nbsp;the Grenadines</td> \
+      <td> \
+        VC</td> \
+      <td> \
+        Kingstown</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Samoa *+</td> \
+      <td> \
+        Independent State of Samoa</td> \
+      <td> \
+        WS</td> \
+      <td> \
+        Apia</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        San Marino *+</td> \
+      <td> \
+        Republic of San Marino</td> \
+      <td> \
+        SM</td> \
+      <td> \
+        San Marino</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Sao Tome and Principe *+</td> \
+      <td> \
+        Democratic Republic of \
+        Sao Tome and Principe</td> \
+      <td> \
+        TP</td> \
+      <td> \
+        São Tomé</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Saudi Arabia *+</td> \
+      <td> \
+        Kingdom of Saudi Arabia</td> \
+      <td> \
+        SA</td> \
+      <td> \
+        Riyadh</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Senegal *+</td> \
+      <td> \
+        Republic of Senegal</td> \
+      <td> \
+        SG</td> \
+      <td> \
+        Dakar</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Serbia *+ \
+      </td> \
+      <td> \
+        Republic of Serbia \
+      </td> \
+      <td> \
+        RI \
+      </td> \
+      <td> \
+        Belgrade</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Seychelles *+</td> \
+      <td> \
+        Republic of Seychelles</td> \
+      <td> \
+        SE</td> \
+      <td> \
+        Victoria</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Sierra Leone *+</td> \
+      <td> \
+        Republic of Sierra Leone</td> \
+      <td> \
+        SL</td> \
+      <td> \
+        Freetown</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Singapore *+</td> \
+      <td> \
+        Republic of Singapore</td> \
+      <td> \
+        SN</td> \
+      <td> \
+        Singapore</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Slovakia *+</td> \
+      <td> \
+        Slovak Republic</td> \
+      <td> \
+        LO</td> \
+      <td> \
+        Bratislava</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Slovenia *+</td> \
+      <td> \
+        Republic of Slovenia</td> \
+      <td> \
+        SI</td> \
+      <td> \
+        Ljubljana</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Solomon Islands *+</td> \
+      <td> \
+        Solomon Islands</td> \
+      <td> \
+        BP</td> \
+      <td> \
+        Honiara</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Somalia *+</td> \
+      <td> \
+        Federal Republic of Somalia</td> \
+      <td> \
+        SO</td> \
+      <td> \
+        Mogadishu</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        South Africa *+</td> \
+      <td> \
+        Republic of South Africa</td> \
+      <td> \
+        SF</td> \
+      <td> \
+        Pretoria \
+    </tr> \
+    <tr> \
+      <td> \
+        South Sudan *+</td> \
+      <td> \
+        Republic of South Sudan</td> \
+      <td> \
+        OD</td> \
+      <td> \
+        Juba</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Spain *+</td> \
+      <td> \
+        Kingdom of Spain</td> \
+      <td> \
+        SP</td> \
+      <td> \
+        Madrid</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Sri Lanka *+</td> \
+      <td> \
+        Democratic Socialist \
+        Republic of Sri Lanka</td> \
+      <td> \
+        CE</td> \
+      <td> \
+        Colombo</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Sudan *+</td> \
+      <td> \
+        Republic of the Sudan</td> \
+      <td> \
+        SU</td> \
+      <td> \
+        Khartoum</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Suriname *+</td> \
+      <td> \
+        Republic of Suriname</td> \
+      <td> \
+        NS</td> \
+      <td> \
+        Paramaribo</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Swaziland *+</td> \
+      <td> \
+        Kingdom of Swaziland</td> \
+      <td> \
+        WZ</td> \
+      <td> \
+        Lobamba</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Sweden *+</td> \
+      <td> \
+        Kingdom of Sweden</td> \
+      <td> \
+        SW</td> \
+      <td> \
+        Stockholm</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Switzerland *+</td> \
+      <td> \
+        Swiss Confederation</td> \
+      <td> \
+        SZ</td> \
+      <td> \
+        Bern</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Syria *+</td> \
+      <td> \
+        Syrian Arab Republic</td> \
+      <td> \
+        SY</td> \
+      <td> \
+        Damascus</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Tajikistan *+</td> \
+      <td> \
+        Republic of Tajikistan</td> \
+      <td> \
+        TI</td> \
+      <td> \
+        Dushanbe</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Tanzania *+</td> \
+      <td> \
+        United Republic of Tanzania</td> \
+      <td> \
+        TZ</td> \
+      <td> \
+        Dodoma</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Thailand *+</td> \
+      <td> \
+        Kingdom of Thailand</td> \
+      <td> \
+        TH</td> \
+      <td> \
+        Bangkok</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Timor-Leste *+</td> \
+      <td> \
+        Democratic Republic of Timor-Leste</td> \
+      <td> \
+        TT</td> \
+      <td> \
+        Dili</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Togo *+</td> \
+      <td> \
+        Togolese Republic</td> \
+      <td> \
+        TO</td> \
+      <td> \
+        Lomé</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Tonga *+</td> \
+      <td> \
+        Kingdom of Tonga</td> \
+      <td> \
+        TN</td> \
+      <td> \
+        Nuku'alofa</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Trinidad and Tobago *+</td> \
+      <td> \
+        Republic of \
+        Trinidad and Tobago</td> \
+      <td> \
+        TD</td> \
+      <td> \
+        Port of Spain</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Tunisia *+</td> \
+      <td> \
+        Republic of Tunisia</td> \
+      <td> \
+        TS</td> \
+      <td> \
+        Tunis</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Turkey *+</td> \
+      <td> \
+        Republic of Turkey</td> \
+      <td> \
+        TU</td> \
+      <td> \
+        Ankara</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Turkmenistan *+</td> \
+      <td> \
+        Turkmenistan</td> \
+      <td> \
+        TX</td> \
+      <td> \
+        Ashgabat</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Tuvalu *+</td> \
+      <td> \
+        Tuvalu</td> \
+      <td> \
+        TV</td> \
+      <td> \
+        Funafuti</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Uganda *+</td> \
+      <td> \
+        Republic of Uganda</td> \
+      <td> \
+        UG</td> \
+      <td> \
+        Kampala</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Ukraine *+</td> \
+      <td> \
+        Ukraine</td> \
+      <td> \
+        UP</td> \
+      <td> \
+        Kyiv</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        United Arab Emirates *+</td> \
+      <td> \
+        United Arab Emirates</td> \
+      <td> \
+        AE</td> \
+      <td> \
+        Abu Dhabi</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        United Kingdom *+</td> \
+      <td> \
+        United Kingdom of Great Britain and Northern Ireland</td> \
+      <td> \
+        UK</td> \
+      <td> \
+        London</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        United States +</td> \
+      <td> \
+        United States of America</td> \
+      <td> \
+        US</td> \
+      <td> \
+        Washington, DC</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Uruguay *+</td> \
+      <td> \
+        Oriental Republic of Uruguay</td> \
+      <td> \
+        UY</td> \
+      <td> \
+        Montevideo</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Uzbekistan *+</td> \
+      <td> \
+        Republic of Uzbekistan</td> \
+      <td> \
+        UZ</td> \
+      <td> \
+        Tashkent</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Vanuatu *+</td> \
+      <td> \
+        Republic of Vanuatu</td> \
+      <td> \
+        NH</td> \
+      <td> \
+        Port-Vila</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Venezuela *+</td> \
+      <td> \
+        Bolivarian Republic of Venezuela</td> \
+      <td> \
+        VE</td> \
+      <td> \
+        Caracas</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Vietnam *+</td> \
+      <td> \
+        Socialist Republic of Vietnam</td> \
+      <td> \
+        VM</td> \
+      <td> \
+        Hanoi</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Yemen *+</td> \
+      <td> \
+        Republic of Yemen</td> \
+      <td> \
+        YM</td> \
+      <td> \
+        Sanaa</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Zambia *+</td> \
+      <td> \
+        Republic of Zambia</td> \
+      <td> \
+        ZA</td> \
+      <td> \
+        Lusaka</td> \
+    </tr> \
+    <tr> \
+      <td> \
+        Zimbabwe *+</td> \
+      <td> \
+        Republic of Zimbabwe</td> \
+      <td> \
+        ZI</td> \
+      <td> \
+        Harare</td> \
+    </tr> \
