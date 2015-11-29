@@ -116,7 +116,7 @@
       console.log("next", index);
       //Clear old value and focus on input
       if (country) {
-        if (ipt.value === country.name) {
+        if (ipt.value.toLowerCase() === country.name.toLowerCase()) {
           ipt.classList.add('correct');
         } else {
           ipt.classList.add('error');
