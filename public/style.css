@@ -16,25 +16,6 @@ input:focus {
 .hide {
   display: none;
 }
-#mobile {
-  width: 100%;
-  background-color: #f00;
-  padding: 5px 0;
-  position: fixed;
-  top: 5%;
-  color: #fff;
-  text-align: center;
-}
-#mobile #xbanner {
-  position: absolute;
-  height: 50px;
-  width: 50px;
-  right: 15px;
-  top: 15px;
-  border-radius: 50%;
-  border: 5px solid #fff;
-  font-size: 32px;
-}
 #intro-container {
   height: 100%;
 }

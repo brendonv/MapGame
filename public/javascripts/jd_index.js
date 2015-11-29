@@ -2,21 +2,7 @@
 !function(window, document, undefined) {
 
   if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-    var b = document.body;
-    var d = document.createElement('div');
-    var x = document.createElement('div');
-    x.id = "xbanner";
-    x.innerHTML = "X";
-    d.id = "mobile";
-    d.appendChild(x);
-    var h = document.createElement('h1');
-    h.innerHTML = "Best on desktop!";
-    d.appendChild(h);
-    b.appendChild(d);
-
-    x.onclick = function () {
-      b.removeChild(d);
-    };
+    alert("For best experience, please use your desktop.")
   }
 
   var degrees = 180 / Math.PI,
