@@ -113,7 +113,7 @@
     }
 
     function nextPlace() {
-      console.log("next", index);
+      // console.log("next", index);
       //Clear old value and focus on input
       if (country) {
         if (ipt.value.toLowerCase() === country.name.toLowerCase()) {
@@ -138,12 +138,11 @@
       index = getRandomIndex();
       //If using one large list, make sure haven't picked country
       while (called.hasOwnProperty(countries[index].name)) {
-        console.log("dupe");
         index = getRandomIndex();
       }
       //Start timer
 
-      console.log("next country: ", countries[index].name, index);
+      // console.log("next country: ", countries[index].name, index);
       country = countries[index];
       zoomBounds(projection, country);
       canvas.transition()
@@ -152,13 +151,13 @@
           .call(zoom.projection(projection).event);
 
       function getRandomIndex() {
-        console.log("random");
         return Math.floor(Math.random()*(n-1));
       }
     }
 
     function nextHint() {
       if (hintIndex > country.name.length-1) return;
+      if (ipt.value.toLowerCase() === country.name.slice(0,ipt.value.length).toLowerCase()) hintIndex = ipt.value.length; 
       if (hintIndex === 0 && ipt.value.length) ipt.value = '';
       ipt.value = country.name.slice(0,hintIndex+1);
       hintIndex++;
@@ -185,14 +184,12 @@
 
     function getInput(e) {
         if (e.which === 13 || e.keyCode === 13) {
-          console.log("RETURN");
           checkAnswer(ipt.value);
         }
       }
 
       function checkAnswer(input) {
         if (country && country.name && input && input.toLowerCase() === country.name.toLowerCase()) {
-          console.log("Correct!");
           var totalTime = timer.end(), gameScore;
           gameScore = game.score(totalTime);
           nextPlace();
