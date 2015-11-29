@@ -159,6 +159,7 @@
 
     function nextHint() {
       if (hintIndex > country.name.length-1) return;
+      if (hintIndex === 0 && ipt.value.length) ipt.value = '';
       ipt.value += country.name.split('')[hintIndex];
       hintIndex++;
       ipt.focus();
