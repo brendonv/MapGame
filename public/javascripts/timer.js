@@ -10,11 +10,15 @@
     
     //PRIVILEGED METHODS
     this.updateDiv = function() {
+      if (itv) this.cancelInterval();
       itv = window.setInterval(itvFunc.bind(this, this.startT, this.div), 10);
     }
     
     this.cancelInterval = function() {
-      window.clearInterval(itv);
+      if (itv) {
+        window.clearInterval(itv);
+        itv = null;
+      }
     }
     
     //PRIVATE METHOD
@@ -24,8 +28,18 @@
 
 
     function format(t) {
-      var t = t.toString().split('').reverse();
-      return (t[6] || "0") + (t[5] || "0") + ":" + (t[4] || "0") + (t[3] || "0") + ":" + (t[2] || "0") + (t[1] || "0");
+      var m = s = ms = 0;
+  
+      t = t % (60 * 60 * 1000);
+      m = Math.floor( t / (60 * 1000) );
+      t = t % (60 * 1000);
+      s = Math.floor( t / 1000 );
+      ms = Math.floor( (t % 1000) / 10 );
+
+      m = m ? m < 10 ? m = "0" + m : m : "00"
+      s = s ? s < 10 ? s = "0" + s : s : "00"
+
+      return m + ":" + s + ":" + ms;
     }
   }
 
